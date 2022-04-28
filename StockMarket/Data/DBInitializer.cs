@@ -1,6 +1,14 @@
-﻿namespace StockMarket.Data
+﻿using Microsoft.EntityFrameworkCore;
+using StockMarket.Models;
+
+namespace StockMarket.Data
 {
-    public class DBInitializer
+    public static class DBInitializer
     {
+        public static void Intialize(StockContext context)
+        {
+            //Create the database if it doesn't exist.
+            context.Database.Migrate();
+        }
     }
 }
