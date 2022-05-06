@@ -4,16 +4,20 @@
     {
         public int Id { get; set; }
 
-        public string Symbol { get; set; }
+        public string Symbol { get; set; } = string.Empty;
 
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
-        public string Currency { get; set; }
+        public string Currency { get; set; } = string.Empty;
 
-        public string Exchange { get; set; }
+        public string Exchange { get; set; } = string.Empty;
 
-        public string Country { get; set; }
+        public string Country { get; set; } = string.Empty;
 
-        public string Type { get; set; }
+        public string Type { get; set; } = string.Empty;
+
+        public Users User { get; set; }
+
+        public int UserId { get; set; }
     }
 }
