@@ -8,5 +8,7 @@ namespace StockMarket.Data
         public StockContext(DbContextOptions<StockContext> options) : base(options) { }
 
         public DbSet<Stock> Stocks { get; set; }
+
+        public DbSet<Users> Users { get; set; }
     }
 }
