@@ -16,7 +16,7 @@
 
         public string Type { get; set; } = string.Empty;
 
-        public Users User { get; set; }
+        public User User { get; set; }
 
         public int UserId { get; set; }
     }
