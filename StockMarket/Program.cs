@@ -8,6 +8,7 @@ builder.Services.AddRazorPages();
 //Add the service to use SQL Server
 builder.Services.AddDbContext<StockContext>(options =>
 {
+    //Connect to our database using our connection string from app settings
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
