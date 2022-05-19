@@ -7,13 +7,25 @@ namespace StockMarket.Data
     {
         public static void Intialize(StockContext context)
         {
-            //Create the database if it doesn't exist.
-            context.Database.Migrate();
-
-            if(context.Stocks.Any())
+            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
             {
-                //DB has been seeded or has entries in it.
-                return;
+                try
+                {
+                    //Create the database if it doesn't exist.
+                    context.Database.Migrate();
+
+                    if (context.Stocks.Any())
+                    {
+                        //DB has been seeded or has entries in it.
+                        return;
+                    }
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
             }
         }
     }
