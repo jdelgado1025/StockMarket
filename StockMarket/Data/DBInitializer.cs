@@ -22,11 +22,13 @@ namespace StockMarket.Data
                 }
                 catch (Exception)
                 {
-
+                    //What exceptions does Migrate throw??
                     throw;
                 }
 
             }
+
+            //If Environment is "Staging", we will use ensure created for GitHub pages
         }
     }
 }
