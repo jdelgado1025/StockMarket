@@ -63,7 +63,6 @@ if (!app.Environment.IsDevelopment())
 else
 {
     app.UseDeveloperExceptionPage();
-    app.UseBrowserLink();
 }
 
 app.UseHttpsRedirection();
