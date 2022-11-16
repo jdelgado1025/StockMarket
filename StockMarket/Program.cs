@@ -20,6 +20,7 @@ builder.Services.AddDefaultIdentity<StockMarketUser>(options => options.SignIn.R
     .AddEntityFrameworkStores<StockMarketContext>();
 
 builder.Services.AddRazorPages();
+
 builder.Services.Configure<IdentityOptions>(options =>
 {
     // Password Settings
@@ -62,7 +63,7 @@ if (!app.Environment.IsDevelopment())
 else
 {
     app.UseDeveloperExceptionPage();
-    //app.UseBrowserLink();
+    app.UseBrowserLink();
 }
 
 app.UseHttpsRedirection();
